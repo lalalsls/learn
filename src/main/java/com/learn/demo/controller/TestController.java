@@ -1,12 +1,12 @@
-package com.learn.demo.Controller;
+package com.learn.demo.controller;
 
 import com.learn.demo.base.BaseController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @ClassName 施振寰
- * @Author 75424
+ * @ClassName TestController
+ * @Author 施振寰
  * @Datr 2019/7/28 11:05
  **/
 @RestController
