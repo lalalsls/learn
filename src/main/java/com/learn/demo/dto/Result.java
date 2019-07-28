@@ -1,8 +1,11 @@
 package com.learn.demo.dto;
 
+import cn.hutool.core.date.DateUnit;
+import cn.hutool.core.date.DateUtil;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * @ClassName com.learn.demo.common.vo
@@ -31,7 +34,8 @@ public class Result <T> implements Serializable {
     /**
      * 时间戳
      */
-    private long timestamp = System.currentTimeMillis();
+//    private long timestamp = System.currentTimeMillis();
+    private Date date = DateUtil.date();
 
     /**
      * 结果对象
