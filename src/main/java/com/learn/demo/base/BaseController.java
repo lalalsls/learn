@@ -1,6 +1,7 @@
 package com.learn.demo.base;
 
 import com.learn.demo.dto.Result;
+import com.learn.demo.util.ResultUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

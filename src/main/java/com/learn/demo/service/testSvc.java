@@ -5,5 +5,7 @@ package com.learn.demo.service;
  * @Date: 2019/7/28 12:20
  * @Description:
  */
-public class testSvc {
+public interface testSvc {
+    String test();
+
 }

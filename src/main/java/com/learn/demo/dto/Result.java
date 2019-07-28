@@ -1,5 +1,7 @@
 package com.learn.demo.dto;
 
+import lombok.Data;
+
 import java.io.Serializable;
 
 /**
@@ -7,6 +9,7 @@ import java.io.Serializable;
  * @Author 施振寰
  * @Datr 2019/7/28 12:09
  **/
+@Data
 public class Result <T> implements Serializable {
     private static final long serialVersionUID = 1L;
 
