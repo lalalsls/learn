@@ -1,4 +1,4 @@
-package com.learn.demo.common.vo;
+package com.learn.demo.dto;
 
 import java.io.Serializable;
 
