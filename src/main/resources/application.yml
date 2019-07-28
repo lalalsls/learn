@@ -2,7 +2,7 @@ spring:
   datasource:
     jdbc-url: jdbc:mysql://192.168.0.108:3307/learn?useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&failOverReadOnly=false&serverTimezone=GMT%2B8
     username: root
-    password: 1234
+    password: passwd123
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
@@ -27,3 +27,6 @@ logging:
     com.lidi: debug
     org.hibernate.SQL: debug
     org.hibernate.type: trace
+#Jackson 时间格式化
+  spring.jackson.time-zone=GMT+8
+  spring.jackson.date-format=yyyy-MM-dd HH:mm:ss
