@@ -22,11 +22,11 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL57InnoDBDialect
     open-in-view: true
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
 logging:
   level:
     com.lidi: debug
     org.hibernate.SQL: debug
     org.hibernate.type: trace
-#Jackson 时间格式化
-  spring.jackson.time-zone=GMT+8
-  spring.jackson.date-format=yyyy-MM-dd HH:mm:ss
