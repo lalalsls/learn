@@ -70,6 +70,7 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
         http.formLogin()
                 .and()
                 .authorizeRequests()
+                .antMatchers("/*", "/home").permitAll()
                 .anyRequest()
                 .authenticated();
     }
