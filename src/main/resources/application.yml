@@ -1,8 +1,11 @@
 spring:
   datasource:
-    url: jdbc:mysql://192.168.0.118:3307/learn?useUnicode=true&characterEncoding=utf-8&useSSL=false&autoReconnect=true&failOverReadOnly=false&serverTimezone=GMT%2B8
+#    url: jdbc:mysql://192.168.0.118:3307/learn?useUnicode=true&characterEncoding=utf-8&useSSL=false&autoReconnect=true&failOverReadOnly=false&serverTimezone=GMT%2B8
+#    username: root
+#    password: passwd123
+    url: jdbc:mysql://172.24.12.171:3306/learn?useUnicode=true&characterEncoding=utf-8&useSSL=false&autoReconnect=true&failOverReadOnly=false&serverTimezone=GMT%2B8
     username: root
-    password: passwd123
+    password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
