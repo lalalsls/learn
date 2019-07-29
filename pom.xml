@@ -61,7 +61,7 @@
         </dependency>
 
 
-<!--        szhuan加入spring-security-->
+<!--        szhuan加入spring-security5-->
 <!--        参考请见.md-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
