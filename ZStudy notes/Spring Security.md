@@ -25,7 +25,7 @@ INSERT INTO `learn`.`user`(`id`, `user_name`, `pass_word`) VALUES ('168463588753
 ###如何解除认证(在com.learn.demo.config.MySecurityConfig里)   
 ```aidl
 /**
-     * 开发其他模块时候把这个注释掉就解除权限验证了
+     * 开发其他模块时候把这个取消注释就解除权限验证了
      * @param web
      * @throws Exception
      */
