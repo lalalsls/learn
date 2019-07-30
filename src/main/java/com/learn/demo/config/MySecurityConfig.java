@@ -69,11 +69,11 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
 //        http.httpBasic();
         http.formLogin()
-                .loginPage("/logina")
+                .loginPage("/authentication/login")
                 .loginProcessingUrl("/authentication/form")
                 .and()
                 .authorizeRequests()
-                .antMatchers("/logina").permitAll()
+                .antMatchers("/authentication/login","/securityLogin.html").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
@@ -96,12 +96,12 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     /**
-     * 开发其他模块时候把这个注释掉就解除权限验证了
+     * 开发其他模块时候把这个取消注释就解除权限验证了
      * @param web
      * @throws Exception
      */
-    @Override
-    public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/**");
-    }
+//    @Override
+//    public void configure(WebSecurity web) throws Exception {
+//        web.ignoring().antMatchers("/**");
+//    }
 }
