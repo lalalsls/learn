@@ -1,10 +1,8 @@
 package com.learn.demo.dto;
 
+import cn.hutool.core.date.DateUnit;
 import cn.hutool.core.date.DateUtil;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.experimental.Accessors;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -15,9 +13,6 @@ import java.util.Date;
  * @Datr 2019/7/28 12:09
  **/
 @Data
-@AllArgsConstructor
-@Accessors(chain = true)
-@NoArgsConstructor
 public class Result <T> implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -37,17 +32,13 @@ public class Result <T> implements Serializable {
     private Integer code;
 
     /**
-     * 时间
+     * 时间戳
      */
+//    private long timestamp = System.currentTimeMillis();
     private Date date = DateUtil.date();
 
     /**
      * 结果对象
      */
     private T result;
-
-    public static Result error(boolean b, String message) {
-
-        return new Result().setSuccess(b).setMessage(message);
-    }
 }
