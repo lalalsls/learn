@@ -9,3 +9,7 @@ localhost:8080/和localhost:8080/home 白名单不会拦截
 关键配置文件   
 /config/MySecurityConfig.java   
 
+---
+用户名：随意输入   
+密  码：123456
+---

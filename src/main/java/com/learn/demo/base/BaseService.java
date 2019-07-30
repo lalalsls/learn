@@ -9,7 +9,7 @@ import java.util.List;
  * @Datr 2019/7/28 11:58
  **/
 // JDK8函数式接口注解 仅能包含一个抽象方法
-//@FunctionalInterface
+@FunctionalInterface
 public interface BaseService <E, ID extends Serializable> {
 
     public BaseDao<E, ID> getRepository();
