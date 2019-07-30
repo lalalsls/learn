@@ -9,6 +9,10 @@ learn Spring boot
 2. React/ant design
 3. Mongodb/MySql
 4. Swagger-ui  http://localhost:8080/swagger-ui.html 文档页面
+<br>swagger-ui接口文档,有如下几点问题
+    1. 2.9.2版本有些bug,会在刷新页面后,后台报错((已修改)可以换旧版本或者只替换他扫描逻辑的依赖包)
+    2. 另外实体类做传入参数时,他的实体类反射扫描,不能很好的显示继承的BaseEntity对象(目前无解决方案)
+
 5. mq引入 RocketMQ或者Kafka，建议消息列队选择前者，后者尝试日志分析
 6. ES引入（最后再做）
 7. 熔断机制（目前完全不懂这个能干什么）

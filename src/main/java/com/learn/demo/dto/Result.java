@@ -1,8 +1,8 @@
 package com.learn.demo.dto;
 
-import cn.hutool.core.date.DateUnit;
 import cn.hutool.core.date.DateUtil;
 import lombok.Data;
+import lombok.experimental.Accessors;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -13,6 +13,7 @@ import java.util.Date;
  * @Datr 2019/7/28 12:09
  **/
 @Data
+@Accessors(chain = true)
 public class Result <T> implements Serializable {
     private static final long serialVersionUID = 1L;
 

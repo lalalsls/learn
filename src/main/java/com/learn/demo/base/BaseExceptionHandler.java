@@ -16,7 +16,7 @@ public class BaseExceptionHandler {
     @ResponseBody
     public Result jsonErrorHandler(Exception exception) {
         log.error("【Exception】:{}", exception.getMessage());
-        return Result.error(false,exception.getMessage());
+        return new Result().setSuccess(false).setMessage(exception.getMessage());
     }
 
 }
