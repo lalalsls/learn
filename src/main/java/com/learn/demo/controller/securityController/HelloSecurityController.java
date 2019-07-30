@@ -27,9 +27,9 @@ public class HelloSecurityController {
         return "/hello";
     }
 
-    @RequestMapping("/login")
+    @RequestMapping("/logina")
     public String login() {
-        return "/login";
+        return "/logina";
     }
     @RequestMapping("/error ")
     @ResponseBody

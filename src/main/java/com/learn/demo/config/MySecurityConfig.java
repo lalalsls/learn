@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -68,11 +69,15 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
 //        http.httpBasic();
         http.formLogin()
+                .loginPage("/logina")
+                .loginProcessingUrl("/authentication/form")
                 .and()
                 .authorizeRequests()
-                //.antMatchers("/*", "/home").permitAll()
+                .antMatchers("/logina").permitAll()
                 .anyRequest()
-                .authenticated();
+                .authenticated()
+                .and()
+                .csrf().disable();
     }
     // 自定义配置认证规则
     @Override
@@ -88,5 +93,15 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
         auth.userDetailsService(detailsService()) // 用户认证
                 .passwordEncoder(passwordEncoder()); // 使用加密验证
 
+    }
+
+    /**
+     * 开发其他模块时候把这个注释掉就解除权限验证了
+     * @param web
+     * @throws Exception
+     */
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        web.ignoring().antMatchers("/**");
     }
 }
