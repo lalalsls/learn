@@ -1,7 +1,5 @@
 package com.learn.demo.controller.securityController;
 
-import com.learn.demo.dto.Result;
-import com.learn.demo.util.ResultUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.web.DefaultRedirectStrategy;
@@ -11,7 +9,6 @@ import org.springframework.security.web.savedrequest.RequestCache;
 import org.springframework.security.web.savedrequest.SavedRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -55,6 +52,13 @@ public class HelloSecurityController {
     private RequestCache requestCache = new HttpSessionRequestCache(); //读取缓存中的所有session
     private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();//页面跳转
 
+    /**
+     * 实现了两种页面重定向方式
+     * @param httpServletRequest
+     * @param httpServletResponse
+     * @return
+     * @throws IOException
+     */
     @RequestMapping("/authentication/login")
     @ResponseStatus(code = HttpStatus.UNAUTHORIZED)//401状态码
     //@ResponseBody
